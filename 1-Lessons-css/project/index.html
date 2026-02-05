@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="header">
@@ -70,7 +70,9 @@
           <td><img src="./assets/images/Check.svg" alt="" /></td>
         </tr>
         <tr class="table-footer">
-          <th class="table-subtitle"><a href="" class="table-link">Have questions?</a></th>
+          <th class="table-subtitle">
+            <a href="" class="table-link">Have questions?</a>
+          </th>
           <td><button class="table-button">get now</button></td>
           <td><button class="table-button active">get now</button></td>
           <td><button class="table-button">get now</button></td>
@@ -104,14 +106,16 @@
           <option>USA</option>
         </select>
 
-        <label for="front">
-          <input id="front" type="radio" name="stack" checked />
-          Frontend
-        </label>
-        <label for="back">
-          <input id="back" type="radio" name="stack" />
-          Backend
-        </label>
+        <div>
+          <label for="front">
+            <input id="front" type="radio" name="stack" checked />
+            Frontend
+          </label>
+          <label for="back">
+            <input id="back" type="radio" name="stack" />
+            Backend
+          </label>
+        </div>
 
         <fieldset>
           <legend>Favorite Technologies</legend>

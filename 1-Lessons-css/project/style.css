@@ -177,3 +177,39 @@ input, select, fieldset, textarea, label, legend, input::placeholder, select::pl
     line-height: 22.4px;
     font-family: inherit;
 }
+
+input[type="text"] {
+    width: 100%;
+}
+
+input[type="email"], nput[type="password"], nput[type="date"], select {
+    width: 230px;
+    height: 50px;
+}
+
+fieldset {
+    width: 100%;
+    padding: 30px 15px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 80px;
+    resize: none;
+}
+
+form .button {
+    width: 100%;
+}
+
+select {
+    background: url(./assets/images/Arrow-down.svg) no-repeat right 15px top 50%;
+    appearance: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: url(./assets/images/Calendar.svg) no-repeat;
+}
+
+/* ============ Стили для футера ================= */
+
