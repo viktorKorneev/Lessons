@@ -44,6 +44,13 @@ button {
     color: #363940;
 }
 
+.text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #95a1bb;
+}
+
 /* ================ Стили для 1-й секции ========================= */
 
 .main-title {
@@ -54,13 +61,7 @@ button {
     margin-bottom: 30px;
 }
 
-.text {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: #95a1bb;
-    margin-bottom: 40px;
-}
+
 
 .button {
     width: 152px;
@@ -84,6 +85,10 @@ button {
 
 .rates-section.title {
     margin-bottom: 20px;
+}
+
+.rates-section.text {
+    margin-bottom: 40px;
 }
 
 .table {
@@ -151,6 +156,11 @@ th, td {
 
 .create-account-section.title {
     margin-bottom: 20px;
+}
+
+.create-account-section.text {
+    margin-bottom: 40px;
+    max-width: 500px;
 }
 
 .list-item {
