@@ -21,3 +21,8 @@ button {
     border: none;
     background-color: transparent;
 }
+
+.header {
+    background-color: #0A61F7;
+    height: 67px;
+}
