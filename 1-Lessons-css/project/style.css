@@ -67,3 +67,29 @@ button {
     color: #fff;
     background: #0A61F7;
 }
+
+/* ================ Стили для 2-й секции ========================= */
+
+.rates-section {
+    background-color: #f9fafc;
+    padding: 100px 0;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.34375;
+    color: #363940;
+    margin-bottom: 20px;
+}
+
+.table {
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #95a1bb;
+    width: 240px;
+    padding: 15px 0;
+    text-align: center;
+}
