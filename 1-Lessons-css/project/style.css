@@ -126,3 +126,16 @@ th, td {
     letter-spacing: 0.12em;
     padding: 8px 0;
 }
+
+.table-subtitle.gray {
+    color: #95a1bb;
+}
+
+.table-button.active {
+    background: #0a61f7;
+    color: #fff;
+}
+
+.table-footer td {
+    padding: 30px 0;
+}
