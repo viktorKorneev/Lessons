@@ -36,3 +36,32 @@ button {
     color: #fff;
 
 }
+
+/* ================ Стили для 1-й секции ========================= */
+
+.main-title {
+    font-weight: 500;
+    font-size: 58px;
+    line-height: 1.17241;
+    color: #363940;
+}
+
+.text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #95a1bb;
+}
+
+.button {
+    width: 152px;
+    height: 50px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 4px;
+    color: #fff;
+    background: #0A61F7;
+}
