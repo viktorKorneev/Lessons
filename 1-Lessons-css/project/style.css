@@ -44,6 +44,7 @@ button {
     font-size: 58px;
     line-height: 1.17241;
     color: #363940;
+    margin-bottom: 30px;
 }
 
 .text {
@@ -51,6 +52,7 @@ button {
     font-size: 16px;
     line-height: 22px;
     color: #95a1bb;
+    margin-bottom: 40px;
 }
 
 .button {
