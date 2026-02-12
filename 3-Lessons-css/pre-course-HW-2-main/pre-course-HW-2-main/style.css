@@ -201,6 +201,11 @@ th, td { /* Стилизуем по названию тега */
     padding: 100px 0;
 }
 
+.account-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
 .create-account-section .title {
     margin-bottom: 50px;
 }
