@@ -127,9 +127,9 @@ li.selected {
     color: rgba(20, 20, 20, 0.8);
     appearance: none;
     background-image: url(./assets/images/ph_caret-down-bold.svg);
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     background-position: right center;
-}
+ } 
 
 .price {
     font-family: "Rubik", sans-serif;

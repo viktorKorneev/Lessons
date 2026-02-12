@@ -213,3 +213,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 /* ============ Стили для футера ================= */
 
+.footer {
+    background-color: #0A61F7;
+    text-align: center;
+    padding: 20px 0;
+}
+
+small {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #fff;
+}
