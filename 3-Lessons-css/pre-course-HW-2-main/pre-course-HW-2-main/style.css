@@ -48,6 +48,12 @@ button {
     padding: 14px 0;
 }
 
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .container {
     height: 100%;
     width: 100%;
@@ -65,6 +71,11 @@ button {
     line-height: 20px; /* 166.667% */
     letter-spacing: 1.4px;
     text-transform: uppercase;
+}
+
+.menu {
+    display: flex;
+    gap: 24px;
 }
 
 /* ================ Стили для 1-й секции ================ */
