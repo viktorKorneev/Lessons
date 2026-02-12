@@ -264,6 +264,18 @@ fieldset {
     padding: 30px 15px;
 }
 
+.fields-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+input[type="email"], input[type="password"], input[type="date"], select {
+    width: 230px;
+    height: 50px;
+    flex-grow: 1;
+}
+
 textarea {
     width: 100%;
     min-height: 80px;
