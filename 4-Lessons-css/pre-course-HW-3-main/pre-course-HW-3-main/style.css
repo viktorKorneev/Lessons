@@ -334,4 +334,14 @@ small {
     .main-img {
         align-self: center;
     }
+
+    .table {
+        width: 940px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        width: 100%;
+        max-width: 940px;
+    }
 }
