@@ -94,7 +94,7 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 800px;
+    min-height: 800px;
 }
 
 .main-title {
@@ -328,6 +328,7 @@ small {
 
     .main-info {
         align-self: flex-start;
+        margin: 100px 0 80px;
     }
 
     .main-img {
