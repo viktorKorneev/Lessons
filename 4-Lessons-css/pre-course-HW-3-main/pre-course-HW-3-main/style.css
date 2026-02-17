@@ -88,6 +88,10 @@ button:hover {
     text-transform: uppercase;
 }
 
+.menu-icon {
+    display: none;
+}
+
 /* ================ Стили для 1-й секции ================ */
 
 .main-wrapper {
@@ -356,5 +360,17 @@ small {
 
     form {
         align-self: center;
+    }
+}
+
+/* =========== Адаптив под мобилки =============== */
+
+@media screen and (max-width: 576px) {
+    .menu {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
     }
 }
