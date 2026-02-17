@@ -347,6 +347,7 @@ small {
 
     .account-wrapper {
         flex-direction: column;
+        gap: 70px;
     }
 
     .create-account-section .text {
