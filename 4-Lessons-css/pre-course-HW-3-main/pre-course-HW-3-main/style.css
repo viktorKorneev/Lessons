@@ -129,6 +129,8 @@ button:hover {
 
 .main-img {
     align-self: flex-end;
+    max-width: 656px;
+    width: 100%;
 }
 
 /* ================ Стили для 2-й секции ================ */
@@ -373,4 +375,14 @@ small {
     .menu-icon {
         display: block;
     }
+
+    .main-info {
+        margin: 60px;
+    }
+
+    .main-title {
+        font-size: 52px;
+        line-height: 1.15385;
+    }
 }
+
