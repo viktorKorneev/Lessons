@@ -138,6 +138,7 @@ button:hover {
 .rates-section {
     background-color: #F9FAFC;
     padding: 100px 0;
+    text-align: center;
 }
 
 .rates-wrapper {
@@ -383,6 +384,19 @@ small {
     .main-title {
         font-size: 52px;
         line-height: 1.15385;
+    }
+
+    .account-wrapper {
+        gap: 60px;
+    }
+
+    label {
+        white-space: nowrap;
+    }
+
+    fieldset {
+        flex-wrap: wrap;
+        row-gap: 20px;
     }
 }
 
