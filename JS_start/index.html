@@ -9,28 +9,42 @@
       //     alert("Привет, мир!!!");
       //   }
       //   setTimeout(greeting, 5000);
-      const friendName = "Alex";
+    //   const friendName = "Alex";
       // friendName = 'Bob';
-      let friendAge = 28;
-      friendAge = 29;
+    //   let friendAge = 28;
+    //   friendAge = 29;
       //   alert("Привет, " + friendName);
 
-      const price = 100;
-      const dicsount = 15;
-      const total = price - (price * dicsount) / 100;
+    //   const price = 100;
+    //   const dicsount = 15;
+    //   const total = price - (price * dicsount) / 100;
 
       //   console.log(total > 90);
       //   console.log(total === 100);
       //   console.log(total < 100);
 
-      if (total >= 90) {    //false
-        // true
-        alert("Не берём");
-      } else if (total < 80) {
-        alert("Дайте два!!!");
-      } else {
-        alert("Берём один");
-      }
+    //   if (total >= 90) {    //false
+    //     // true
+    //     alert("Не берём");
+    //   } else if (total < 80) {
+    //     alert("Дайте два!!!");
+    //   } else {
+    //     alert("Берём один");
+    //   }
+
+    let sum = 1000;
+    const persent = 15;
+    const result = 2000;
+    let count = 0;
+
+    while (count < 10) {
+        sum = sum + sum * (persent / 100)
+        alert(sum)
+        count = count + 1
+    }
+    
+    console.log(sum, count);
+    
     </script>
   </head>
   <body>
