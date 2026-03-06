@@ -16,21 +16,21 @@
       //   alert("Привет, " + friendName);
 
       const price = 100;
-      const dicsount = 10;
+      const dicsount = 15;
       const total = price - (price * dicsount) / 100;
-      //   console.log(total);
 
       //   console.log(total > 90);
       //   console.log(total === 100);
       //   console.log(total < 100);
 
-      //   var myName = "Alex";
-      //   var myName = "Bob";
-
-      // const myName = "Alex";
-      // const myName = "Bob";
-
-      
+      if (total >= 90) {    //false
+        // true
+        alert("Не берём");
+      } else if (total < 80) {
+        alert("Дайте два!!!");
+      } else {
+        alert("Берём один");
+      }
     </script>
   </head>
   <body>
