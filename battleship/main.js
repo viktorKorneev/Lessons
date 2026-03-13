@@ -6,14 +6,23 @@ const location3 = 5;
 let isSunk = false;
 //предполагаемая позиция корабля ("выстрел")
 let guess;
+//добавляем счётчик попаданий
+let hits = 0;
 
 while (isSunk === false) {
-    //не забываем, что строку надо превратить в число
-    guess = +prompt("Fire! Enter a number 0-6")
-    //логическое "или"
-    if(guess === location1 || guess === location2 || guess === location3) {
-        alert("HIT!")
-    } else {
-        alert("MISS!")
+  //не забываем, что строку надо превратить в число
+  guess = +prompt("Fire! Enter a number 0-6");
+  //логическое "или"
+  if (guess === location1 || guess === location2 || guess === location3) {
+    alert("HIT!");
+    //считае попадания
+    hits = hits + 1;
+    //если подбили
+    if (hits === 3) {
+      isSunk = true;
+      alert("You sank my battleship!");
     }
+  } else {
+    alert("MISS!");
+  }
 }
