@@ -1,13 +1,16 @@
 //позиция корабля
-const location1 = 3;
-const location2 = 4;
-const location3 = 5;
+const rendomLoc = Math.floor(Math.random() * 5); //от 0 до 4
+const location1 = rendomLoc;
+const location2 = location1 + 1;
+const location3 = location2 + 1;
 //потоплен или нет
 let isSunk = false;
 //предполагаемая позиция корабля ("выстрел")
 let guess;
 //добавляем счётчик попаданий
 let hits = 0;
+//создаём счётчик выстрелов
+let guesses = 0;
 
 while (isSunk === false) {
   //не забываем, что строку надо превратить в число
@@ -15,6 +18,8 @@ while (isSunk === false) {
   if (guess < 0 || guess > 6) {
     alert("Please, enter a valid cell number!");
   } else {
+    //увеличиваем счётчик выстрелов
+    guesses += 1;
     //логическое "или"
     if (guess === location1 || guess === location2 || guess === location3) {
       alert("HIT!");
@@ -30,3 +35,6 @@ while (isSunk === false) {
     }
   }
 }
+
+const stats = "You have " + hits + "hits out of " + guesses + "shots.";
+alert(stats);
