@@ -36,5 +36,5 @@ while (isSunk === false) {
   }
 }
 
-const stats = "You have " + hits + "hits out of " + guesses + "shots.";
+const stats = "You have " + hits + " hits out of " + guesses + " shots.";
 alert(stats);
