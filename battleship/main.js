@@ -12,17 +12,21 @@ let hits = 0;
 while (isSunk === false) {
   //не забываем, что строку надо превратить в число
   guess = +prompt("Fire! Enter a number 0-6");
-  //логическое "или"
-  if (guess === location1 || guess === location2 || guess === location3) {
-    alert("HIT!");
-    //считае попадания
-    hits = hits + 1;
-    //если подбили
-    if (hits === 3) {
-      isSunk = true;
-      alert("You sank my battleship!");
-    }
+  if (guess < 0 || guess > 6) {
+    alert("Please, enter a valid cell number!");
   } else {
-    alert("MISS!");
+    //логическое "или"
+    if (guess === location1 || guess === location2 || guess === location3) {
+      alert("HIT!");
+      //считае попадания
+      hits = hits + 1;
+      //если подбили
+      if (hits === 3) {
+        isSunk = true;
+        alert("You sank my battleship!");
+      }
+    } else {
+      alert("MISS!");
+    }
   }
 }
