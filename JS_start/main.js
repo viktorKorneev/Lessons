@@ -1,16 +1,15 @@
-// let sum = +prompt("Укажите стартовую сумму", 1000);
-// const persent = 15;
-// const result = 2000;
 
-// let count = 0;
+const depositAmount = 1000;
+const yearRate = 15;
+const depositTermInYears = 2;
 
-// const depositTerm = +prompt("Укажите срок депозита", 10);
+let depositIncome = 0;
+let count = 0;
 
-// while (count < depositTerm) {
-//   sum = sum + sum * (persent / 100);
-//   count = count + 1;
-//   document.write(count + ": " + sum + "<br>");
-// }
+while (count < depositTermInYears) {
+  depositIncome = depositIncome + depositAmount * (yearRate / 100);
+  count = count + 1;
+}
 
 // const inStock = true;
 // const onSale = false;
@@ -39,15 +38,15 @@
 // bark("spike", 53);
 // bark("lady", 17);
 
-function makeTea(cups, tea) {
-  console.log("Brewing " + cups + " cups of " + tea);
-}
-makeTea(3, "Earl Grey");
-makeTea(3);
-makeTea(3, "Earl Grey", "hey ma!", 42);
-makeTea("Earl Grey", 3);
+// function makeTea(cups, tea) {
+//   console.log("Brewing " + cups + " cups of " + tea);
+// }
+// makeTea(3, "Earl Grey");
+// makeTea(3);
+// makeTea(3, "Earl Grey", "hey ma!", 42);
+// makeTea("Earl Grey", 3);
 
-function barkAtTheMoon() {
-  console.log("Wooooooooooooo!");
-}
-barkAtTheMoon()
+// function barkAtTheMoon() {
+//   console.log("Wooooooooooooo!");
+// }
+// barkAtTheMoon();
