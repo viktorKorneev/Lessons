@@ -42,7 +42,12 @@
 function makeTea(cups, tea) {
   console.log("Brewing " + cups + " cups of " + tea);
 }
-makeTea(3, "Earl Grey")
-// makeTea(3)
-// makeTea(3, "Earl Grey", "hey ma!", 42)
-// makeTea("Earl Grey", 3)
+makeTea(3, "Earl Grey");
+makeTea(3);
+makeTea(3, "Earl Grey", "hey ma!", 42);
+makeTea("Earl Grey", 3);
+
+function barkAtTheMoon() {
+  console.log("Wooooooooooooo!");
+}
+barkAtTheMoon()
