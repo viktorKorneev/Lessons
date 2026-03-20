@@ -1,15 +1,17 @@
-
 const depositAmount = 1000;
 const yearRate = 15;
 const depositTermInYears = 2;
 
-let depositIncome = 0;
-let count = 0;
+function getDepositIncome(amount, rate, term) {
+  let depositIncome = 0;
+  let count = 0;
 
-while (count < depositTermInYears) {
-  depositIncome = depositIncome + depositAmount * (yearRate / 100);
-  count = count + 1;
+  while (count < depositTermInYears) {
+    depositIncome = depositIncome + depositAmount * (yearRate / 100);
+    count = count + 1;
+  }
 }
+console.log(depositIncome);
 
 // const inStock = true;
 // const onSale = false;
