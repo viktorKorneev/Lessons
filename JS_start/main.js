@@ -100,7 +100,10 @@ function makePhrases() {
     " " +
     words3[randomIndex_3];
 
-  alert(phrase);
+  return phrase;
 }
 
-makePhrases();
+
+alert(makePhrases());
+
+
