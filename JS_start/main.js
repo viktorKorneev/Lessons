@@ -67,20 +67,26 @@
 // }
 // barkAtTheMoon();
 
-const scores = [60, 50, 60, 58, 54, 54, 58, 50, 52, 54];
+// const scores = [60, 50, 60, 58, 54, 54, 58, 50, 52, 54];
 
-console.log(scores[0]);
-console.log(scores[2]);
+// console.log(scores[0]);
+// console.log(scores[2]);
 
-const pets = ["dog", "cat", "rat"];
+// const pets = ["dog", "cat", "rat"];
 
-console.log(pets[2]);
-console.log(pets[3]);
+// console.log(pets[2]);
+// console.log(pets[3]);
 
-console.log(pets.length);
-console.log(scores.length);
+// console.log(pets.length);
+// console.log(scores.length);
 
-pets[2] = "parrot";
-console.log(pets);
-console.log(scores);
+// pets[2] = "parrot";
+// console.log(pets);
+// console.log(scores);
 
+
+function makePhrases() {
+  const words1 = ["Мой кот", "Моя собака", "Мой попугай"];
+  const words2 = ["любит есть", "хочет погрызть", "всегда ищет"];
+  const words3 = ["морковку", "макароны", "косточку"];
+}
