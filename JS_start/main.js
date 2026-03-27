@@ -82,4 +82,5 @@ console.log(scores.length);
 
 pets[2] = "parrot";
 console.log(pets);
+console.log(scores);
 
