@@ -106,12 +106,20 @@ const scores = [
   64, 66, 55, 52, 61, 46, 31, 57, 52, 44, 17, 41, 53, 55, 61, 51, 44,
 ];
 
-let i = 0;
+// let i = 0;
 let output;
 
-while (i < scores.length) {
+// while (i < scores.length) {
+//   output = "Bubble solution #" + i + " score: " + scores[i];
+//   console.log(output);
+
+//   i = i + 1;
+// }
+
+for(let i = 0; i < scores.length; i++) {
   output = "Bubble solution #" + i + " score: " + scores[i];
   console.log(output);
-
-  i = i + 1;
 }
+
+console.log("Bubbles tests: " + scores.length);
+
