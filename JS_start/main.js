@@ -106,6 +106,12 @@ const scores = [
   64, 66, 55, 52, 61, 46, 31, 57, 52, 44, 17, 41, 53, 55, 61, 51, 44,
 ];
 
+const costs = [
+  0.25, 0.27, 0.25, 0.25, 0.25, 0.25, 0.33, 0.31, 0.25, 0.29, 0.27, 0.22, 0.31,
+  0.25, 0.25, 0.33, 0.21, 0.25, 0.25, 0.25, 0.28, 0.25, 0.24, 0.22, 0.2, 0.25,
+  0.3, 0.25, 0.24, 0.25, 0.25, 0.27, 0.26, 0.29,
+];
+
 // let i = 0;
 
 // while (i < scores.length) {
@@ -155,3 +161,27 @@ function getBestScores(array, maxValue) {
 
 const bestSolutions = getBestScores(scores, highScore);
 console.log("Solutions with highest score: " + bestSolutions);
+
+function getMostCostEffectiveSolution(resultArray, costsArray, maxValue) {
+  let index;
+  let cost = 100;
+  for (let i = 0; i < resultArray.length; i++) {
+    if (resultArray[i] === maxValue) {
+      if (costsArray[i] < cost) {
+        cost = costsArray[i];
+        index = i;
+      }
+    }
+  }
+
+  return index;
+}
+
+const mostCostEffective = getMostCostEffectiveSolution(
+  scores,
+  costs,
+  highScore,
+);
+console.log(
+  "Bubble Solution #" + mostCostEffective + " is the most cost effective",
+);
