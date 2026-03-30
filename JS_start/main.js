@@ -142,12 +142,16 @@ function printAndGetHighScore(array) {
 
 // console.log("Min score: " + minScore);
 
-const bestSolutions = [];
+function getBestScores(array, maxValue) {
+  const bestSolutions = [];
 
-for (let i = 0; i < scores.length; i++) {
-  if (scores[i] === highScore) {
-    bestSolutions.push(i);
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === maxValue) {
+      bestSolutions.push(i);
+    }
   }
+  return bestSolutions;
 }
 
+const bestSolutions = getBestScores(scores, highScore);
 console.log("Solutions with highest score: " + bestSolutions);
