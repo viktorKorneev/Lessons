@@ -164,14 +164,11 @@ console.log("Solutions with highest score: " + bestSolutions);
 
 function getMostCostEffectiveSolution(resultArray, costsArray, maxValue) {
   let index;
-  let cost = 100;
-  for (let i = 0; i < resultArray.length; i++) {
-    if (resultArray[i] === maxValue) {
-      if (costsArray[i] < cost) {
-        cost = costsArray[i];
-        index = i;
-      }
-    }
+  const bestSolutions = getBestScores(resultArray, maxValue);
+  if (costsArray[bestSolutions[0]] < costsArray[bestSolutions[1]]) {
+    index = bestSolutions[0];
+  } else {
+    index = bestSolutions[1];
   }
 
   return index;
