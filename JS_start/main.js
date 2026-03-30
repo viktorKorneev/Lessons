@@ -107,7 +107,6 @@ const scores = [
 ];
 
 // let i = 0;
-let output;
 
 // while (i < scores.length) {
 //   output = "Bubble solution #" + i + " score: " + scores[i];
@@ -115,25 +114,39 @@ let output;
 
 //   i = i + 1;
 // }
-
-let highScore = 0;
-
-for (let i = 0; i < scores.length; i++) {
-  output = "Bubble solution #" + i + " score: " + scores[i];
-  console.log(output);
-  if (highScore < scores[i]) {
-    highScore = scores[i];
-  }
-}
+const highScore = printAndGetHighScore(scores);
+// let minScore = 0;
 
 console.log("Bubbles tests: " + scores.length);
 console.log("Highest with highest score: " + highScore);
 
+function printAndGetHighScore(array) {
+  let output;
+  let highScore = 0;
+  for (let i = 0; i < array.length; i++) {
+    output = "Bubble solution #" + i + " score: " + array[i];
+    console.log(output);
+    if (highScore < array[i]) {
+      highScore = array[i];
+    }
+  }
+  return highScore;
+}
+
+// for (let i = 0; i < scores.length; i++) {
+//   if (highScore > scores[i]) {
+//     highScore = scores[i];
+//     minScore = highScore;
+//   }
+// }
+
+// console.log("Min score: " + minScore);
+
 const bestSolutions = [];
 
-for(let i = 0; i < scores.length; i++){
-  if(scores[i] === highScore) {
-    bestSolutions.push(i)
+for (let i = 0; i < scores.length; i++) {
+  if (scores[i] === highScore) {
+    bestSolutions.push(i);
   }
 }
 
