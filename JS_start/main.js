@@ -116,10 +116,15 @@ let output;
 //   i = i + 1;
 // }
 
-for(let i = 0; i < scores.length; i++) {
+let highScore = 0;
+
+for (let i = 0; i < scores.length; i++) {
   output = "Bubble solution #" + i + " score: " + scores[i];
   console.log(output);
+  if (highScore < scores[i]) {
+    highScore = scores[i];
+  }
 }
 
 console.log("Bubbles tests: " + scores.length);
-
+console.log("Highest with highest score: " + highScore);
