@@ -84,19 +84,26 @@
 // console.log(pets);
 // console.log(scores);
 
-function getRandomElement(array) {
-  const randomIndex = Math.floor(Math.random() * array.length);
-  return array[randomIndex];
-}
+// function getRandomElement(array) {
+//   const randomIndex = Math.floor(Math.random() * array.length);
+//   return array[randomIndex];
+// }
 
-  const words1 = ["Мой кот", "Моя собака", "Мой попугай"];
-  const words2 = ["любит есть", "хочет погрызть", "всегда ищет"];
-  const words3 = ["морковку", "макароны", "косточку"];
-  const words4 = ["Мой хомяк", "Моя крыса", "Мой енот"];
+//   const words1 = ["Мой кот", "Моя собака", "Мой попугай"];
+//   const words2 = ["любит есть", "хочет погрызть", "всегда ищет"];
+//   const words3 = ["морковку", "макароны", "косточку"];
+//   const words4 = ["Мой хомяк", "Моя крыса", "Мой енот"];
 
-function makePhrases(param1, param2, param3) {
-  const result = getRandomElement(param1) + " " + getRandomElement(param2) + " " + getRandomElement(param3);
-  return result;
-}
+// function makePhrases(param1, param2, param3) {
+//   const result = getRandomElement(param1) + " " + getRandomElement(param2) + " " + getRandomElement(param3);
+//   return result;
+// }
 
-alert(makePhrases(words4, words2, words3));
+// alert(makePhrases(words4, words2, words3));
+
+const scores = [
+  60, 50, 60, 58, 54, 54, 59, 50, 52, 54, 48, 69, 34, 55, 51, 52, 44, 51, 69,
+  64, 66, 55, 52, 61, 46, 31, 57, 52, 44, 17, 41, 53, 55, 61, 51, 44,
+];
+
+
