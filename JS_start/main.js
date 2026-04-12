@@ -183,7 +183,6 @@
 //   "Bubble Solution #" + mostCostEffective + " is the most cost effective",
 // );
 
-  
 const car = {
   make: "Chevy",
   model: "Bel Air",
@@ -191,15 +190,19 @@ const car = {
   color: "red",
   passengers: 2,
   convertible: false,
-  mileage: 1021
-}
+  mileage: 1021,
+};
 
 const dog = {
   name: "Fido",
   weight: 20.2,
   age: 4,
   breed: "mixed",
-  activity: "fetch balls"
-}
+  activity: "fetch balls",
+};
+
+dog.weight = 24;
+
+dog.isDog = true;
 
 console.log(dog);
