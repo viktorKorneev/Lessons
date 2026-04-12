@@ -101,16 +101,16 @@
 
 // alert(makePhrases(words4, words2, words3));
 
-const scores = [
-  60, 50, 60, 58, 54, 54, 59, 50, 52, 54, 48, 69, 34, 55, 51, 52, 44, 51, 69,
-  64, 66, 55, 52, 61, 46, 31, 57, 52, 44, 17, 41, 53, 55, 61, 51, 44,
-];
+// const scores = [
+//   60, 50, 60, 58, 54, 54, 59, 50, 52, 54, 48, 69, 34, 55, 51, 52, 44, 51, 69,
+//   64, 66, 55, 52, 61, 46, 31, 57, 52, 44, 17, 41, 53, 55, 61, 51, 44,
+// ];
 
-const costs = [
-  0.25, 0.27, 0.25, 0.25, 0.25, 0.25, 0.33, 0.31, 0.25, 0.29, 0.27, 0.22, 0.31,
-  0.25, 0.25, 0.33, 0.21, 0.25, 0.25, 0.25, 0.28, 0.25, 0.24, 0.22, 0.2, 0.25,
-  0.3, 0.25, 0.24, 0.25, 0.25, 0.27, 0.26, 0.29,
-];
+// const costs = [
+//   0.25, 0.27, 0.25, 0.25, 0.25, 0.25, 0.33, 0.31, 0.25, 0.29, 0.27, 0.22, 0.31,
+//   0.25, 0.25, 0.33, 0.21, 0.25, 0.25, 0.25, 0.28, 0.25, 0.24, 0.22, 0.2, 0.25,
+//   0.3, 0.25, 0.24, 0.25, 0.25, 0.27, 0.26, 0.29,
+// ];
 
 // let i = 0;
 
@@ -120,24 +120,24 @@ const costs = [
 
 //   i = i + 1;
 // }
-const highScore = printAndGetHighScore(scores);
+// const highScore = printAndGetHighScore(scores);
 // let minScore = 0;
 
-console.log("Bubbles tests: " + scores.length);
-console.log("Highest with highest score: " + highScore);
+// console.log("Bubbles tests: " + scores.length);
+// console.log("Highest with highest score: " + highScore);
 
-function printAndGetHighScore(array) {
-  let output;
-  let highScore = 0;
-  for (let i = 0; i < array.length; i++) {
-    output = "Bubble solution #" + i + " score: " + array[i];
-    console.log(output);
-    if (highScore < array[i]) {
-      highScore = array[i];
-    }
-  }
-  return highScore;
-}
+// function printAndGetHighScore(array) {
+//   let output;
+//   let highScore = 0;
+//   for (let i = 0; i < array.length; i++) {
+//     output = "Bubble solution #" + i + " score: " + array[i];
+//     console.log(output);
+//     if (highScore < array[i]) {
+//       highScore = array[i];
+//     }
+//   }
+//   return highScore;
+// }
 
 // for (let i = 0; i < scores.length; i++) {
 //   if (highScore > scores[i]) {
@@ -201,3 +201,5 @@ const dog = {
   breed: "mixed",
   activity: "fetch balls"
 }
+
+console.log(dog);
