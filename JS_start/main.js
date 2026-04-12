@@ -148,37 +148,48 @@ function printAndGetHighScore(array) {
 
 // console.log("Min score: " + minScore);
 
-function getBestScores(array, maxValue) {
-  const bestSolutions = [];
+// function getBestScores(array, maxValue) {
+//   const bestSolutions = [];
 
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] === maxValue) {
-      bestSolutions.push(i);
-    }
-  }
-  return bestSolutions;
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i] === maxValue) {
+//       bestSolutions.push(i);
+//     }
+//   }
+//   return bestSolutions;
+// }
+
+// const bestSolutions = getBestScores(scores, highScore);
+// console.log("Solutions with highest score: " + bestSolutions);
+
+// function getMostCostEffectiveSolution(resultArray, costsArray, maxValue) {
+//   let index;
+//   const bestSolutions = getBestScores(resultArray, maxValue);
+//   if (costsArray[bestSolutions[0]] < costsArray[bestSolutions[1]]) {
+//     index = bestSolutions[0];
+//   } else {
+//     index = bestSolutions[1];
+//   }
+
+//   return index;
+// }
+
+// const mostCostEffective = getMostCostEffectiveSolution(
+//   scores,
+//   costs,
+//   highScore,
+// );
+// console.log(
+//   "Bubble Solution #" + mostCostEffective + " is the most cost effective",
+// );
+
+  
+const car = {
+  make: "Chevy",
+  model: "Bel Air",
+  year: "1957",
+  color: "red",
+  passengers: 2,
+  convertible: false,
+  mileage: 1021
 }
-
-const bestSolutions = getBestScores(scores, highScore);
-console.log("Solutions with highest score: " + bestSolutions);
-
-function getMostCostEffectiveSolution(resultArray, costsArray, maxValue) {
-  let index;
-  const bestSolutions = getBestScores(resultArray, maxValue);
-  if (costsArray[bestSolutions[0]] < costsArray[bestSolutions[1]]) {
-    index = bestSolutions[0];
-  } else {
-    index = bestSolutions[1];
-  }
-
-  return index;
-}
-
-const mostCostEffective = getMostCostEffectiveSolution(
-  scores,
-  costs,
-  highScore,
-);
-console.log(
-  "Bubble Solution #" + mostCostEffective + " is the most cost effective",
-);
