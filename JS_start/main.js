@@ -201,6 +201,12 @@ const dog = {
   activity: "fetch balls",
 };
 
+if(car.mileage < 50000) {
+    alert("Берём!!!!")
+} else (
+    alert("Не берём!!!!")
+)
+
 dog.weight = 24;
 
 dog.isDog = true;
