@@ -205,4 +205,6 @@ dog.weight = 24;
 
 dog.isDog = true;
 
+delete dog.activity
+
 console.log(dog);
