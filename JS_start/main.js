@@ -223,7 +223,6 @@
 // console.log(prequal(cadi));
 // console.log(prequal(fiat));
 
-
 const fido = {
   name: "Fido",
   weight: 48,
@@ -231,12 +230,28 @@ const fido = {
   loves: "walks",
 };
 
-function loseWaight (dog, amount) {
+function loseWaight(dog, amount) {
   dog.weight = dog.weight - amount;
 }
 
-loseWaight(fido, 10)
-alert(fido.weight)
+loseWaight(fido, 10);
+alert(fido.weight);
+
+const superSecretFile = {
+  level: "classified",
+  opened: 0,
+  password: 2,
+  contents: "Dr. Evel's next meeting is in Detroit",
+};
+
+function getSecret(file, secretPassword) {
+  file.opened = file.opened + 1;
+  if (secretPassword == file.password) {
+    return file.contents;
+  } else {
+    return "Invalid password! No secret for you.";
+  }
+}
 
 // if (car.mileage < 50000) {
 //   alert("Берём!!!!");
