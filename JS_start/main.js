@@ -253,21 +253,28 @@ function getSecret(file, secretPassword) {
   }
 }
 
-const content = getSecret(superSecretFile, 2)
+const content = getSecret(superSecretFile, 2);
 console.log(content);
 console.log(superSecretFile);
 
-function setSecret (file, secretPassword, secret) {
-  if(secretPassword === file.password) {
+function setSecret(file, secretPassword, secret) {
+  if (secretPassword === file.password) {
     file.opened = 0;
     file.contents = secret;
   }
 }
 
-setSecret(superSecretFile, 2, "Dr. Evel's next meeting is in Minsk.")
+setSecret(superSecretFile, 2, "Dr. Evel's next meeting is in Minsk.");
 console.log(superSecretFile);
 
+function setPassword(file, currentPassword, newPassword) {
+  if (currentPassword === file.password) {
+    file.password = newPassword;
+  }
+}
 
+setPassword(superSecretFile, 2, 3);
+alert(getSecret(superSecretFile, 3));
 
 // if (car.mileage < 50000) {
 //   alert("Берём!!!!");
