@@ -224,7 +224,7 @@
 // console.log(prequal(fiat));
 
 
-const dog = {
+const fido = {
   name: "Fido",
   weight: 48,
   breed: "Mixed",
@@ -234,6 +234,9 @@ const dog = {
 function loseWaight (dog, amount) {
   dog.weight = dog.weight - amount;
 }
+
+loseWaight(fido, 10)
+alert(fido.weight)
 
 // if (car.mileage < 50000) {
 //   alert("Берём!!!!");
