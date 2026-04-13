@@ -235,7 +235,7 @@ function loseWaight(dog, amount) {
 }
 
 loseWaight(fido, 10);
-alert(fido.weight);
+// alert(fido.weight);
 
 const superSecretFile = {
   level: "classified",
@@ -246,12 +246,28 @@ const superSecretFile = {
 
 function getSecret(file, secretPassword) {
   file.opened = file.opened + 1;
-  if (secretPassword == file.password) {
+  if (secretPassword === file.password) {
     return file.contents;
   } else {
     return "Invalid password! No secret for you.";
   }
 }
+
+const content = getSecret(superSecretFile, 2)
+console.log(content);
+console.log(superSecretFile);
+
+function setSecret (file, secretPassword, secret) {
+  if(secretPassword === file.password) {
+    file.opened = 0;
+    file.contents = secret;
+  }
+}
+
+setSecret(superSecretFile, 2, "Dr. Evel's next meeting is in Minsk.")
+console.log(superSecretFile);
+
+
 
 // if (car.mileage < 50000) {
 //   alert("Берём!!!!");
