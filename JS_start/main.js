@@ -183,7 +183,7 @@
 //   "Bubble Solution #" + mostCostEffective + " is the most cost effective",
 // );
 
-const car = {
+const chevy = {
   make: "Chevy",
   model: "Bel Air",
   year: 1957,
@@ -193,24 +193,57 @@ const car = {
   mileage: 1021,
 };
 
-const dog = {
-  name: "Fido",
-  weight: 20.2,
-  age: 4,
-  breed: "mixed",
-  activity: "fetch balls",
+const cadi = {
+  make: "GM",
+  model: "Cadillac",
+  year: 1955,
+  color: "tan",
+  passengers: 5,
+  convertible: false,
+  mileage: 12892,
 };
 
-if(car.mileage < 50000) {
-    alert("Берём!!!!")
-} else (
-    alert("Не берём!!!!")
-)
+const fiat = {
+  make: "Fiat",
+  model: "500",
+  year: 1957,
+  color: "Medium Blue",
+  passengers: 2,
+  convertible: false,
+  mileage: 88000,
+};
 
-dog.weight = 24;
+function prequal(car) {
+  if (car.year > 1955 && car.mileage < 50000) {
+    return true;
+  }
+  return false;
+}
+console.log(prequal(cadi));
 
-dog.isDog = true;
 
-delete dog.activity
+// const dog = {
+//   name: "Fido",
+//   weight: 20.2,
+//   age: 4,
+//   breed: "mixed",
+//   activity: "fetch balls",
+// };
 
-console.log(dog);
+// if (car.mileage < 50000) {
+//   alert("Берём!!!!");
+// } else alert("Не берём!!!!");
+
+// dog.weight = 24;
+
+// dog.isDog = true;
+
+// delete dog.activity;
+
+// console.log(dog);
+
+// const number = 27;
+// const newNumber = number;
+// const newDog = dog;
+// newDog.weight = 25.0;
+// console.log(dog);
