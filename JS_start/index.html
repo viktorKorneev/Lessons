@@ -1,39 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lesson_1</title>
-    <script>
-      //   function greeting() {
-      //     alert("Привет, мир!!!");
-      //   }
-      //   setTimeout(greeting, 5000);
-      //   const friendName = "Alex";
-      // friendName = 'Bob';
-      //   let friendAge = 28;
-      //   friendAge = 29;
-      //   alert("Привет, " + friendName);
 
-      //   const price = 100;
-      //   const dicsount = 15;
-      //   const total = price - (price * dicsount) / 100;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .list {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+    }
 
-      //   console.log(total > 90);
-      //   console.log(total === 100);
-      //   console.log(total < 100);
+    .item {
+        font-family: Arial, sans-serif;
+        cursor: pointer;
+    }
 
-      //   if (total >= 90) {    //false
-      //     // true
-      //     alert("Не берём");
-      //   } else if (total < 80) {
-      //     alert("Дайте два!!!");
-      //   } else {
-      //     alert("Берём один");
-      //   }
-    </script>
-  </head>
-  <body>
+    .done {
+        font-weight: 600;
+        /* Делает текст более жирным, подчеркивая статус "пройдено" */
+    }
+
+    .done::before {
+        content: "✅";
+        /* Добавляет знак галочки после текста элемента */
+        font-size: 13px;
+        margin-left: 5px;
+    }
+</style>
+
+<body>
+    <div>
+        <h1 id="course-title" class="title">Фронт с "нуля" 📚</h1>
+        <ul class="list">
+            <li class="item done">Переменные</li>
+            <li class="item">Операторы, сравнение, ветвление</li>
+            <li class="item">Функции</li>
+            <li class="item">Массивы</li>
+            <li class="item">Объекты</li>
+            <li class="item current" id="dom">Взаимодействие с DOM ⬅</li>
+            <li class="item">Типы данных</li>
+            <li class="item">Асинхронное программирование</li>
+            <li class="item">Продвинутая работа с функциями</li>
+            <li class="item">Паттерн MVC</li>
+        </ul>
+    </div> 
     <script src="main.js"></script>
-  </body>
+</body>
 </html>
