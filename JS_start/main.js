@@ -14,47 +14,90 @@ const model = {
       { id: 5, title: "Объекты", isDone: false },
     ],
   },
+  showOnlyCompleted: false,
   render() {
-    // 1. delete previos view
+    // 1. delete previos view Очищает консоль — console.clear(), чтобы каждый раз видеть только актуальное состояние.
     console.clear();
-    // 2. Create view for current state
-    console.log(this.courseData);
+    // 2. Create view for current state Выводит текущие данные — console.log(this.getData()).
+    console.log(this.getLessons());
   },
   createLesson(lessonTitle) {
     // 1. Change data immutable (создать новое состояние данных, новую версию)
     const newLesson = {
-      id: 6,
-      title: lessonTitle,
-      isDone: false,
+      id: 6, // id: 6 — пока захардкожен
+      title: lessonTitle, // title: lessonTitle — берётся из аргумента
+      isDone: false, // isDone: false — новый урок не выполнен
     };
-    const nextStatelessons = [...this.courseData.lessons, newLesson];
-    this.setState(nextStatelessons);
+    this.setState([...this.courseData.lessons, newLesson]); //[...] — разворачивает старый массив уроков // newLesson — добавляется в конец
   },
   deleteLesson(lessonId) {
     // 1. Change data immutable (создать новое состояние данных, новую версию)
-    const nextStatelessons = this.courseData.lessons.filter(
-      (el) => el.id !== lessonId,
+    this.setState(
+      this.courseData.lessons.filter(
+        //filter создаёт новый массив, в который попадут только те элементы, у которых id !== lessonId.
+        (el) => el.id !== lessonId,
+      ),
     );
-    this.setState(nextStatelessons);
   },
   updateLessonStatus(lessonId) {
+    //map создаёт новый массив. Для каждого урока l: // если l.id === lessonId: // создаётся новый объект: { ...l, isDone: !l.isDone }
+    //...l — копия всех полей // isDone: !l.isDone — переворот статуса иначе: возвращается l как есть В итоге: все уроки те же
+    // один — с перевёрнутым isDone // Новый массив передаётся в setState.
     // 1. Change data immutable (создать новое состояние данных, новую версию)
-    const nextStatelessons = [...this.courseData.lessons];
-    const lesson = nextStatelessons.find((l) => l.id === lessonId);
-    lesson.isDone = !lessonId.isDone;
-    this.setState(nextStatelessons);
+    this.setState(
+      this.courseData.lessons.map((l) =>
+        l.id === lessonId ? { ...l, isDone: !l.isDone } : l,
+      ),
+    );
   },
   setState(nextStatelessons) {
     if (this.courseData.lessons !== nextStatelessons) {
       // 1. Set next data to model
-      this.courseData.lessons = nextStatelessons;
+      this.courseData.lessons = nextStatelessons; // обновляет состояние: this.courseData.lessons = nextStatelessons
       // 2. Update view after change data
       this.render();
     } else {
-      console.error("Data not changed!")
+      console.error("Data not changed!");
+    }
+  },
+  getLessons() {
+    if (this.showOnlyCompleted === false) {
+      // если showOnlyCompleted === false → вернуть все уроки
+      return this.courseData.lessons;
+    } else {
+      return this.courseData.lessons.filter((l) => l.isDone === true); //если true → вернуть только выполненные (isDone === true)
     }
   },
 };
 
 //initialization:
 model.render();
+//Вызывается model.render() // render вызывает getData // getData возвращает все уроки (так как showOnlyCompleted === false)
+// В консоли ты видишь начальное состояние.
+
+const view = {
+  init() {
+    const root = document.getElementById("root");
+    root.append(this.createTitle(model.courseData.title));
+  },
+  createTitle(lessonTitle) {
+    const title = document.createElement("h1");
+    title.classList.add("title");
+    title.setAttribute("id", "course-title");
+    title.textContent = lessonTitle;
+    return title;
+  },
+  createList(lessons) {
+    if (lessons.length === 0) {
+      const message = document.createElement("span");
+      message.textContent = "Уроки отсутсвуют. Создайте первый.";
+      return message;
+    } else {
+      const list = document.createElement("ul");
+      list.classList.add("list");
+      return list;
+    }
+  },
+};
+
+view.init();
