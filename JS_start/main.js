@@ -17,9 +17,11 @@ const model = {
   showOnlyCompleted: false,
   render() {
     // 1. delete previos view Очищает консоль — console.clear(), чтобы каждый раз видеть только актуальное состояние.
-    console.clear();
+    // console.clear();
     // 2. Create view for current state Выводит текущие данные — console.log(this.getData()).
-    console.log(this.getLessons());
+    // console.log(this.getLessons());
+    const lessons = this.getLessons();
+    view.createList(lessons);
   },
   createLesson(lessonTitle) {
     // 1. Change data immutable (создать новое состояние данных, новую версию)
@@ -68,17 +70,26 @@ const model = {
       return this.courseData.lessons.filter((l) => l.isDone === true); //если true → вернуть только выполненные (isDone === true)
     }
   },
+  toggleLessonFilter() {
+    model.showOnlyCompleted = !model.showOnlyCompleted;
+    this.render();
+  },
 };
 
 //initialization:
-model.render();
+// model.render();
 //Вызывается model.render() // render вызывает getData // getData возвращает все уроки (так как showOnlyCompleted === false)
 // В консоли ты видишь начальное состояние.
 
 const view = {
   init() {
     const root = document.getElementById("root");
-    root.append(this.createTitle(model.courseData.title));
+    root.append(
+      this.createTitle(model.courseData.title),
+      this.createAddLessonForm(),
+      this.createLessonFilter(model.showOnlyCompleted),
+      this.createList(model.getLessons()),
+    );
   },
   createTitle(lessonTitle) {
     const title = document.createElement("h1");
@@ -95,8 +106,41 @@ const view = {
     } else {
       const list = document.createElement("ul");
       list.classList.add("list");
+      for (let i = 0; i < lessons.length; i++) {
+        const item = this.createLesson(lessons[i]);
+        list.append(item);
+      }
       return list;
     }
+  },
+  createLesson(lesson) {
+    const item = document.createElement("li");
+    item.classList.add("item");
+    item.textContent = lesson.title;
+    if (lesson.isDone === true) {
+      item.classList.add("done");
+    }
+    const delButton = document.createElement("button");
+    delButton.textContent = "x";
+    item.append(delButton);
+    return item;
+  },
+  createLessonFilter(isCheked) {
+    const label = document.createElement("label");
+    const checkBox = document.createElement("input");
+    checkBox.setAttribute("type", "checkbox");
+    checkBox.checked = isCheked;
+    label.textContent = "Показывать только выполненные";
+    label.append(checkBox);
+    return label;
+  },
+  createAddLessonForm() {
+    const form = document.createElement("form");
+    const input = document.createElement("input");
+    const addButton = document.createElement("button");
+    addButton.textContent = "+";
+    form.append(input, addButton);
+    return form;
   },
 };
 
